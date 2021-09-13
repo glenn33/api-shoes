@@ -4,7 +4,7 @@ class PagesController < ApplicationController
   end
 
   def show
-    @shoe = Shoe.find(id: params[:id])
-    # @variant = Variant.
+    @shoe = Shoe.find(params[:id])
+    @variant = Variant.where(shoe_id: @shoe.id)
   end
 end

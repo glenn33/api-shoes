@@ -1,0 +1,8 @@
+<h1><%= @shoe.name %> variants</h1>
+<br>
+<% @variant.each do |var| %>
+  <div class="each-var">
+    <h3><%= var.name %></h3>
+    <h3>Precio: <%= var.price %></h3>
+  </div>
+<% end %>
