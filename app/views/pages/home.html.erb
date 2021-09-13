@@ -1,2 +1,10 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<h1>All our shoes!</h1>
+<% @shoes.each do |shoe| %>
+  <div class="cards">
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/best-running-shoes-lead-1576249557.jpg)">
+      <%= link_to shoe_path(shoe) do %>
+        <%= shoe.name %>
+      <% end %>
+    </div>
+  </div>
+<% end %>
